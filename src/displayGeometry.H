@@ -40,16 +40,15 @@ void displayGeometry
     
   // display
   glClear(GL_COLOR_BUFFER_BIT);
-	for (int blockId = 0; blockId < sizeBlocks; blockId++ )
-	{
-    glBegin(GL_POLYGON);
-    for(int numPointInBlock = 0; numPointInBlock < 4;  numPointInBlock++)
-      glVertex2f(points[cells[blockId][ numPointInBlock]][0], points[cells[blockId][ numPointInBlock]][1]);
-    glEnd();
-	}
+  for (int blockId = 0; blockId < sizeBlocks; blockId++ )
+  {
+  glBegin(GL_POLYGON);
+  for(int numPointInBlock = 0; numPointInBlock < 4;  numPointInBlock++)
+    glVertex2f(points[cells[blockId][ numPointInBlock]][0], points[cells[blockId][ numPointInBlock]][1]);
+  glEnd();
+  }
   glFlush();
 }
 
 }
-
 #endif
